@@ -1,0 +1,14 @@
+extends default
+
+block content   
+    h2.left Students
+    form#studentForm
+    table#student_table.student-table
+        tbody
+
+    button.btn#addStudentRow Add Row
+    button.btn#addStudent_formButton(style= 'display: none') Add Student
+    button.btn#downloadBtn Print List
+
+block scripts
+    script(src="/js/student_scripts.js")

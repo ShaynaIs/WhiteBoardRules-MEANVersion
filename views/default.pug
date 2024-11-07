@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    title #{title}
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    // link to favicon
+    link(rel='icon', type='image/x-icon', href='/pictures/favicon.ico') 
+    // Bootstrap CSS
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    // Custom CSS
+    link(rel='stylesheet', href='/css/styles.css')
+    // Bootstrap Validator CSS
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css")
+    // Bootstrap Icons CSS
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css")
+    // JQuery Slick library for carousel
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+    // Jquery
+    script(src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    // Bootstrap Popper JS    
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    // Bootstrap JS
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+    // Bootstrap Validator JS
+    script(src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js")
+    // Responsive Slides JS
+    script(src="ResponsiveSlides.js-master/responsiveslides.min.js")
+    // Slick JS
+    script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+    
+
+  body
+    block header
+      div#header
+        div.logo-container
+          a(href="/")
+            img(src="pictures/LogoImage.png" width="80").logo
+            img(src="pictures/LogoSlogan.png")#slogan
+        div#logoutNavigation.slimmenu
+          div.dropdown.navItem.nav.font-weight-bold 
+            img#user_icon.icon(src="pictures/IconImages/multiFlower.jpeg")
+            a#username.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded="false") Username
+            div.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")    
+              a#logoutButton.dropdown-item(href='#') Logout
+    div#content
+      block content
+
+    block footer
+      hr
+      div#footer
+        h2 Contact Us
+        form#contactForm
+            label(for="contact_nameInput")
+            input(type="text" id="contact_nameInput" placeholder="Your Name" required)
+            br
+            label(for="contact_emailInput")
+            input(type="email" id="contact_emailInput" placeholder="Your Email"  required)
+            br
+            label(for="contact_messageInput")
+            textarea(id="contact_messageInput" placeholder="Your Message" required)
+            br
+            button#contact_formButton.btn-secondary(type='button') Send Email
+
+  script(src="/js/contact_ajax.js")
+  block scripts

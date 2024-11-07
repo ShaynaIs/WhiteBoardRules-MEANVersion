@@ -1,0 +1,467 @@
+:root {
+    --primary: #668F80;
+    /* Brand primary, should have at least 4:1 contrast ratio with white */
+    --secondary: #4A6670;
+    /* Compliments the primary, should have at least 4:1 contrast ratio with white */
+    --accent: #D6A2AD;
+    /* Contrasts with Primary and Secondary, typically does not have text on top of it, so can be any color */
+    --light: #F2E9E4;
+    /* background */
+    --lightprimary: #A0AF84;
+    --dark: #22223B;
+    /* text */
+    --ui: #C9ADA7;
+    /* small contrast with background, used for borders , dividers, etc */
+}
+
+/* Navigation 
+.navigation {
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    margin: 0 /*!important ;
+}
+*/
+#slogan {
+    max-height: 80px;
+    /* Ensure the slogan matches the height of the logo */
+    margin-left: 10px;
+    /* Add some spacing between the logo and slogan */
+    margin-right: 10px;
+    width: auto;
+}
+
+#logo {
+    align-self: flex-start;
+    /* Align the logo to the top of the container */
+    margin-top: 5px;
+}
+
+.navItem {
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav {
+    color: var(--primary) !important;
+    text-decoration: none;
+    padding: 15px 10px;
+    font-weight: 900;
+}
+
+.nav:hover {
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+.active {
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.dropdown-toggle{
+    min-width:160px;
+}
+
+
+
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+
+
+/* Body */
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    /*text-align: center;
+    
+    padding-top: 100px;
+    padding-bottom: 40px;
+    /*margin-top: 80px;
+    margin-bottom: 40px;*/
+}
+
+#header {
+    background-color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 99px;
+    flex-shrink: 0;
+    /*
+    position: fixed;
+    top: 0;
+    z-index: 1000;*/
+    border-bottom: 2px groove var(--primary);
+    box-shadow: var(--primary) 0px 4px 4px 0px;
+    padding: 10px;
+}
+
+#content {
+    padding: 2em;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+/*
+#bar a {
+    color: cyan;
+    text-decoration: none;
+}
+
+#bar a:hover {
+    text-decoration: underline;
+}
+
+#bar p {
+    margin: 0;
+}
+*/
+#footer {
+    background-color: var(--primary);
+    padding: 5px;
+    width: 100%;
+    /*bottom: 0;*/
+    text-align: center;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+/*extra classes*/
+.urlBare {
+    color: var(--dark);
+    text-decoration: none;
+    /* no underline */
+}
+
+.left {
+    width: 100%;
+    text-align: left !important;
+}
+
+/* Enhanced Table Styling */
+table.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table.student-table thead {
+    border-bottom: 3px solid var(--primary);
+}
+
+table.student-table th {
+    padding: 8px;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table.student-table td {
+    padding: 8px;
+    border-bottom: 1px solid var(--ui);
+}
+
+table.student-table tbody tr:nth-child(even) {
+    background-color: var(--light);
+}
+
+table.student-table tbody tr:nth-child(odd) {
+    background-color: var(--light);
+}
+
+table.student-table tbody tr:hover {
+    background-color: var(--ui);
+}
+
+table.student-table th,
+table.student-table td {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+input.addStudentInput {
+    background: none;
+    border: none !important;
+    text-align: center;
+    font-size: 16px;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+input.addStudentInput:focus {
+    background: none;
+    border: none !important;
+    outline: none;
+}
+
+a.btn {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Login settings */
+/* Flex left/right */
+.flexContent {
+    display: flex;
+    padding: 0 6em;
+}
+
+.leftContent {
+    padding-right: 40px;
+    width: 70%
+}
+
+.rightContent {
+    width: 30%;
+}
+
+.login_preheadline,
+.login_headline {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.login_headline {
+    font-size: 6em;
+    line-height: 80%;
+}
+
+.login_summary {
+    max-width: 600px;
+}
+
+/*
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+
+.form-container {
+    text-align: center;
+}
+
+h1 {
+    text-align:center;
+}
+*/
+.login-form {
+    width: auto;
+}
+
+/*
+.form-border {
+    border: solid grey 2px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 6px grey;
+    background-color: white;
+    text-align:left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+*/
+.btn {
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    border: solid var(--light) 2px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    border: solid var(--dark) 2px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    color: var(--light);
+    border-color: var(--light);
+}
+
+/*
+label {
+    margin-bottom: 5px;
+    text-align:left;
+}
+*/
+input[type="number"],
+textarea,
+select {
+    width: auto;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+}
+
+form button {
+    width: auto;
+}
+
+form .button-group {
+    justify-content: flex-end;
+}
+
+/*
+.student-list {
+    margin-top: 20px;
+}
+
+/* Profile Pics in Sign up 
+.profile-pic-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-pic-div div {
+    margin: 10px;
+}
+
+/* Slick Slider settings */
+.slickImg {
+    width: 100px; /* Adjust according to your requirement */
+    height: 100px; /* Adjust according to your requirement */
+    border-radius: 50px;
+    border: 1px solid grey;
+}
+
+.slickImg:hover {
+    cursor: pointer;
+    border-color: grey;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: grey;
+}
+
+.slick-prev {
+    margin-left: 5px;
+}
+
+.slick-next {
+    margin-right: 5px;
+}
+
+/* Responsive Slides Settings */
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.rslides li {
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    max-width: 400px;
+    border: 0;
+    box-shadow: var(--primary) 0px 4px 4px 0px;
+}
+
+.rslides {
+    z-index: 1;
+    /* Set a lower z-index value than the login form */
+}
+
+.arrowicon {
+    max-width: 100px;
+    top: 2px;
+    position: relative;
+    left: -10px;
+    z-index: 100;
+}

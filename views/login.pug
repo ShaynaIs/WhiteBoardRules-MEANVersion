@@ -1,0 +1,85 @@
+extends default 
+
+block content 
+    div.flexContent
+        div.leftContent
+            h6.login_preheadline White Board Rules 
+            h1.login_headline streamline the process of making report cards
+            p.login_summary White Board Rules is the world's first smart teacher assistant. We bring all of your content together whilst letting you focus on the work you love.
+            div.slidescontainer
+                ul.rslides 
+                    li  
+                        img(src='/pictures/samples/sample1.jpg' alt="")
+                    li  
+                        img(src='/pictures/samples/sample2.jpg' alt="")
+                    li  
+                        img(src='/pictures/samples/sample3.jpg' alt="")
+                    li  
+                        img(src='/pictures/samples/sample4.jpg' alt="")
+                    li  
+                        img(src='/pictures/samples/sample5.jpg' alt="")
+                img.arrowicon(src='/pictures/icons/arrow.png')
+        div.text-center.rightContent
+            div#loginCard
+                h3.mb-4 Login
+                form#loginForm  
+                    div.form-group
+                        input(type="text" name="username" id="loginUsername" class="form-control" placeholder="Username" required autofocus autocomplete="off")
+                    div.form-group    
+                        input(type="password" name="password" id="loginPassword" class="form-control" placeholder="Password" required)
+
+                    button(class='btn btn-block' type="submit") Sign in
+                    p.text-center.mt-2
+                        a#showSignUp.urlBare(href="#") Need an account? Sign up
+            div#registerCard.modal-body(style="display:none;")
+                h3.mb-4 Sign Up
+                form#registerForm
+                    div.form-group    
+                        input(type="text" name="first" id="signupFirstname" class="form-control" placeholder="First Name" required autofocus autocomplete="off")
+                    div.form-group    
+                        input(type="text" name="last" id="signupLastname" class="form-control" placeholder="Last Name" required autocomplete="off")    
+                    div.form-group    
+                        input(type="text" name="username" id="signupUsername" class="form-control" placeholder="Username" required autocomplete="off") 
+                    div.form-group    
+                        input(type="email" name="email" id="signupEmail" class="form-control" placeholder="Email" required autocomplete="off")
+                    div.form-group    
+                        input(type="password" name="password" id="signupPassword" class="form-control" placeholder="Password" required)
+
+                    
+                    div.form-group.profile-pic-container
+                        h6 Select Profile Icon
+                        div.profile-pic-div
+                            div
+                                img.slickImg(src="pictures/IconImages/art.jpeg" alt="art supplies clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/baking.jpeg" alt="baking supplies clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/calc.jpeg" alt="calculus chalkboard clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/comp.jpeg" alt="computer clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/dog.jpeg" alt="dog clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/eng.jpeg" alt="bookd clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/fitness.jpeg" alt="fitness supplies clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/gardening.jpeg" alt="gardening supplies clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/history.jpeg" alt="world globe clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/mathSimple.jpeg" alt="math symbols clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/multiFlower.jpeg" alt="flowers clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/musicSymbol.jpeg" alt="music symbols clip art")
+                            div 
+                                img.slickImg(src="pictures/IconImages/science.jpeg" alt="science clip art")
+                        input#profilePic(type="hidden" name='profileIcon' value="none")
+
+                    button(class='btn btn-block' type="submit") Register
+                    p.text-center.mt-2
+                        a#showLogin.urlBare(href="#") Already have an account? Log in
+
+block scripts   
+    script(src="/js/login_scripts.js")
